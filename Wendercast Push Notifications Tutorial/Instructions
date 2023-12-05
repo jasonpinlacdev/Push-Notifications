@@ -1,0 +1,14 @@
+For remote notifications, your company’s server generates push notifications, and Apple Push Notification service (APNs) handles the delivery of those notifications to the user’s devices.
+
+In order to simulate your company server generating a push notification and APNS handling the delivery of the notification, you can run a command in the terminal
+
+https://www.kodeco.com/11395893-push-notifications-tutorial-getting-started
+
+Open the Terminal app and navigate to the directory where you saved first.apn. Then type in the following command using either booted or the device identifier from Xcode in place of device_identifier: 
+
+xcrun simctl push <device_identifier> <bundle_identifier> first.apn 
+
+Replace device_identifier with the device identifier you copied from Xcode and replace bundle_identifier with the app’s bundle identifier — the one you used when you first set up the project. 
+
+Here’s an example:
+xcrun simctl push 302A8892-D399-4E0F-9DCE-3FA56940EE59 com.raywenderlich.WenderCast second.apn
